@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="sectionItem"
+            type="com.example.model.Provider" />
+
+        <variable
+            name="adapter"
+            type="com.example.home.views.NestedItemsAdapter" />
+
+        <variable
+            name="viewmodel"
+            type="com.example.home.HomeViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_title_section"
+            style="@style/SectionTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:lineSpacingExtra="4sp"
+            android:text="@{sectionItem.title}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="TagTitle" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_giftcards_items"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adapter="@{adapter}"
+            android:clipToPadding="false"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:scrollIndicators="none"
+            android:scrollbars="none"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_section"
+            app:nestedItems="@{sectionItem.getItemsWithSectionId()}"
+            tools:itemCount="10"
+            tools:listitem="@layout/item_gift_card" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

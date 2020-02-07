@@ -1,0 +1,34 @@
+apply plugin: 'com.android.application'
+apply from: '../android_commons.gradle'
+
+android {
+    defaultConfig {
+        applicationId ApplicationId.id
+    }
+    dataBinding {
+        enabled true
+    }
+}
+
+dependencies {
+    // COMMON
+    implementation project(Modules.common)
+    // DATA modules
+    implementation project(Modules.remote)
+    implementation project(Modules.repository)
+    // FEATURES modules
+    implementation project(Modules.featureHome)
+    implementation project(Modules.featureGiftCardDetails)
+    // NAVIGATION
+    implementation project(Modules.navigation)
+    // KOIN
+    implementation Libraries.koin
+    implementation Libraries.koinViewModel
+    // ANDROID
+    implementation AndroidLibraries.appCompat
+    implementation AndroidLibraries.navigation
+    implementation AndroidLibraries.navigationFrag
+    implementation AndroidLibraries.lifecycleViewModel
+    implementation AndroidLibraries.lifecycleExtensions
+}
+

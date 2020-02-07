@@ -1,0 +1,67 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorSecondary">@android:color/white</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <!--    app main styles    -->
+
+    <style name="SectionTitle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/outer_space</item>
+    </style>
+
+    <style name="PriceText">
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/outer_space</item>
+        <item name="android:letterSpacing">-0.04</item>
+    </style>
+
+    <style name="PriceText.Coins">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="CoinsText">
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="DetailsPriceText">
+        <item name="android:textSize">34sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/outer_space</item>
+        <item name="android:letterSpacing">0.01</item>
+    </style>
+
+    <style name="DetailsPriceText.Coins">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="DetailsCoinsText">
+        <item name="android:textSize">24sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+
+    <style name="DescriptionText">
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@color/outer_space</item>
+    </style>
+
+</resources>
